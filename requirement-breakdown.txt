@@ -1,0 +1,61 @@
+==========================
+ REQUIREMENT BREAKDOWN
+==========================
+
+HOW I UNDERSTAND THE TASK
+-------------------------
+- The assignment has two parts:
+    1. Fixed Asset Management mini-system using .NET Core Razor Pages and SQL Server.
+    2. C# Console Application for straight-line depreciation tracking.
+
+- For the web app:
+    - Implement full CRUD for assets.
+    - Show automatic straight-line depreciation calculation on the Asset List page.
+    - Allow filtering by category and searching by asset name.
+
+- For the console app:
+    - User can input multiple assets.
+    - Calculate and display yearly depreciation, total depreciation, and net book value for each asset.
+
+-------------------------
+QUESTIONS FOR CLARIFICATION
+-------------------------
+- Should asset categories be static or user-defined?
+- Is authentication/authorisation needed?
+- What date and number formats should be supported?
+- Any extra input validation or business rules?
+- Should I include database migration/seeding scripts or just sample data?
+- Any requirements for deployment/demo hosting?
+
+-------------------------
+EXPLANATION OF MY APPROACH
+-------------------------
+- For the Razor Pages app:
+    - Used Razor Pages with clear folder structure.
+    - Model for asset data, ViewModel for depreciation calculations.
+    - Entity Framework Core for DB interaction.
+    - Implemented CRUD pages (List, Add, Edit, Delete).
+    - Dynamic calculation of depreciation and net book value using properties in the ViewModel.
+    - Added filter (by category) and search (by asset name) using LINQ.
+    - UI styled with Bootstrap for responsiveness.
+
+- For the Console Application:
+    - OOP design for Asset model.
+    - Used properties/methods for calculations.
+    - Validated user input and handled exceptions.
+    - Output formatted for easy reading.
+
+-------------------------
+C# IMPLEMENTATION
+-------------------------
+- Complete code included for:
+    - Data models, ViewModels, DbContext.
+    - Razor Pages (Index, Create, Edit, Delete).
+    - Depreciation calculation and UI logic.
+    - LINQ-based filtering and searching.
+    - Console app with robust input handling.
+- Code is modular, well-commented, and follows best practices.
+
+==========================
+END OF BREAKDOWN
+==========================
