@@ -1,0 +1,47 @@
+﻿@page "{id:int}"
+@model EditModel
+@{
+    ViewData["Title"] = "Edit Asset";
+}
+
+<h2>Edit Asset</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Asset.Id" />
+    <div class="form-group">
+        <label asp-for="Asset.AssetName"></label>
+        <input asp-for="Asset.AssetName" class="form-control" />
+        <span asp-validation-for="Asset.AssetName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Asset.Category"></label>
+        <select asp-for="Asset.Category" class="form-control">
+            <option value="">--Select Category--</option>
+            <option>Equipment</option>
+            <option>Vehicle</option>
+            <option>Furniture</option>
+        </select>
+        <span asp-validation-for="Asset.Category" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Asset.PurchaseDate"></label>
+        <input asp-for="Asset.PurchaseDate" class="form-control" type="date" />
+        <span asp-validation-for="Asset.PurchaseDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Asset.PurchaseValue"></label>
+        <input asp-for="Asset.PurchaseValue" class="form-control" />
+        <span asp-validation-for="Asset.PurchaseValue" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Asset.UsefulLifeYears"></label>
+        <input asp-for="Asset.UsefulLifeYears" class="form-control" />
+        <span asp-validation-for="Asset.UsefulLifeYears" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
